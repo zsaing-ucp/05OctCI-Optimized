@@ -1,0 +1,13 @@
+name: ci-pipeline
+on: 
+  push:
+    branches:
+    -  "**"
+jobs:
+  ci-job:
+  runs-on: ubuntu_latest
+  steps:
+    -  name: checkout repository
+       uses: actions/checkout@v4
+    -  name: Check WD on Runner
+       run: ${{github.workspace}} 
