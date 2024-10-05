@@ -28,4 +28,4 @@ jobs:
           echo "--- Package.json Contents ---"
           cat package.json
       - name: Lint HTML
-        run: htmlhint **/*.html
+        run: npx htmlhint **/*.html
