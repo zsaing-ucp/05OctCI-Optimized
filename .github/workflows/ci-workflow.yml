@@ -10,4 +10,4 @@ jobs:
     -  name: checkout repository
        uses: actions/checkout@v4
     -  name: Check WD on Runner
-       run: ${{github.workspace}} 
+       run: ${{github.workspace}}
