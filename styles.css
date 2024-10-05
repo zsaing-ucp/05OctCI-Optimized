@@ -2,3 +2,13 @@ body{
     background-color: orange;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+h1{
+    font-size: 3em;
+}
+h2{
+    font-size: 2em;
+}
+p{
+    font-size: 1.3em;
+    text-align: justify;
+}
