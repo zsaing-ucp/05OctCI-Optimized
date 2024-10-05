@@ -4,10 +4,14 @@ on:
     branches:
     -  "**"
 jobs:
-  ci-job:
-  runs-on: ubuntu_latest
-  steps:
-    -  name: checkout repository
-       uses: actions/checkout@v4
-    -  name: Check WD on Runner
-       run: ${{github.workspace}}
+  linting-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+      # following step is just for testing
+      - name: Check WD
+        run: | 
+          echo ${{github.workspace}}
+          echo ${{github.action_ref}}
+          echo ${{github.action_repository}} 
