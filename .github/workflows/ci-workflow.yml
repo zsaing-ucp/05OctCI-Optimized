@@ -17,3 +17,13 @@ jobs:
           echo ${{github.action_ref}}
           echo ${{github.event_name}}
           echo ${{github.actor}}
+      - name: Install HTML Hint
+        run: npm install --save-dev htmlhint
+      - name: Install Styleline
+        run: npm install --save-dev stylelint stylelint-config-standard
+      - name: Checking File Listing and Package.json Contents
+        run: |
+          echo "--- File Contents ----"
+          ls -a
+          echo "--- Package.json Contents ---"
+          cat package.json
