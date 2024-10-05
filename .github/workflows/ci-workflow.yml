@@ -12,6 +12,6 @@ jobs:
       # following step is just for testing
       - name: Check WD
         run: | 
-          echo ${{github.workspace}}
-          echo ${{github.action_ref}}
-          echo ${{github.action_repository}} 
+          echo "${{github.workspace}}"
+          echo "${{github.action_ref}}"
+          echo "${{github.action_repository}}" 
