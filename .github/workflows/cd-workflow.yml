@@ -1,0 +1,15 @@
+name: cd-pipeline
+on:
+    workflow_run: 
+        workflows: 
+            - "ci-pipeline"
+        types: 
+            - completed
+jobs:
+    cd-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Help Needed
+              run: echo "Allah Please Help Me"
+            - name: check Previous Workflow Run Status
+              run: echo "${{github.event.workflow_run}}"           
