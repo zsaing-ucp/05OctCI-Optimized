@@ -18,3 +18,7 @@ jobs:
               run: npm install --save-dev parcel
             - name: check the contents of Package.json
               run: cat package.json
+            - name: Build the Website
+              run: npx parcel build **/*.html
+            - name: Check The Contents of the WD after the Build Operation
+              run: ls -a
