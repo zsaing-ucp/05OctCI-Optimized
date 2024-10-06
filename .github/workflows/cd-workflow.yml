@@ -12,4 +12,4 @@ jobs:
             - name: Help Needed
               run: echo "Allah Please Help Me"
             - name: check Previous Workflow Run Status
-              run: echo "${{github.event.workflow_run.conclusion=='sucess'}}"           
+              run: echo "${{github.event.workflow_run.conclusion=='success'}}"           
