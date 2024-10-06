@@ -13,6 +13,8 @@ jobs:
               run: echo "Allah Please Help Me"
             - name: check Previous Workflow Run Status
               run: echo "${{github.event.workflow_run.conclusion=='success'}}"           
+            - name: Checkout Repository
+              uses: actions/checkout@v4
               # now set up parcel to build the website
             - name: Setup Parcel Tool to Build the website
               run: npm install --save-dev parcel
