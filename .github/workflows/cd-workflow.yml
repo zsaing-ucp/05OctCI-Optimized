@@ -19,6 +19,6 @@ jobs:
             - name: check the contents of Package.json
               run: cat package.json
             - name: Build the Website
-              run: npx parcel build "./${{github.workspace}}/index.html"
+              run: npx parcel build ".${{github.workspace}}/index.html"
             - name: Check The Contents of the WD after the Build Operation
               run: ls -a
