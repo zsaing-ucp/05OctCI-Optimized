@@ -8,11 +8,15 @@ on:
 jobs:
     cd-job:
         runs-on: ubuntu-latest
+        #Job will only run if the Dependecy Workflow 
+        if: ${{github.event.workflow_run.conclusion=='success'}}
         steps:
             - name: Help Needed
               run: echo "Allah Please Help Me"
             - name: check Previous Workflow Run Status
-              run: echo "${{github.event.workflow_run.conclusion=='success'}}"           
+              run: echo "${{github.event.workflow_run.conclusion=='success'}}"         
+            - name: Checking Dependency Workflow
+              run: echo "${{github.event.workflow.name}}"  
             - name: Checkout Repository
               uses: actions/checkout@v4
               # now set up parcel to build the website
